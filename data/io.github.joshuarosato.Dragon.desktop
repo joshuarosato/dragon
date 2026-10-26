@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Dragon
+Comment=Drag files from the command line into GUI applications
+Exec=dragon %F
+Icon=mail-attachment-symbolic
+Terminal=false
+Categories=Utility;
+StartupNotify=false
+NoDisplay=true

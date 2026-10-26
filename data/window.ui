@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Checked-in GTK Builder counterpart of window.blp so `cargo build` does not
+  require blueprint-compiler. Edit window.blp and run `make ui` to regenerate.
+-->
+<interface>
+  <requires lib="gtk" version="4.8"/>
+  <requires lib="Adw" version="1.0"/>
+  <object class="AdwApplicationWindow" id="window">
+    <property name="title">Dragon</property>
+    <property name="default-width">380</property>
+    <property name="default-height">220</property>
+    <property name="resizable">false</property>
+    <property name="decorated">false</property>
+    <property name="content">
+      <object class="GtkBox" id="drag_card">
+        <property name="orientation">vertical</property>
+        <property name="spacing">12</property>
+        <property name="margin-top">28</property>
+        <property name="margin-bottom">28</property>
+        <property name="margin-start">28</property>
+        <property name="margin-end">28</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+        <property name="hexpand">true</property>
+        <property name="vexpand">true</property>
+        <style>
+          <class name="card"/>
+          <class name="dragon-card"/>
+        </style>
+        <child>
+          <object class="GtkImage" id="file_icon">
+            <property name="icon-name">text-x-generic-symbolic</property>
+            <property name="pixel-size">64</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="title_label">
+            <property name="label">File</property>
+            <property name="ellipsize">end</property>
+            <property name="max-width-chars">34</property>
+            <style>
+              <class name="title-3"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="subtitle_label">
+            <property name="label">Drag into another application</property>
+            <property name="ellipsize">middle</property>
+            <property name="max-width-chars">44</property>
+            <style>
+              <class name="dim-label"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+            <property name="label">Drag to another application</property>
+            <style>
+              <class name="caption"/>
+              <class name="dim-label"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </property>
+  </object>
+</interface>

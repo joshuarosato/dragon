@@ -1,0 +1,48 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow window {
+  title: "Dragon";
+  default-width: 380;
+  default-height: 220;
+  resizable: false;
+  decorated: false;
+
+  content: Gtk.Box drag_card {
+    orientation: vertical;
+    spacing: 12;
+    margin-top: 28;
+    margin-bottom: 28;
+    margin-start: 28;
+    margin-end: 28;
+    halign: center;
+    valign: center;
+    hexpand: true;
+    vexpand: true;
+    styles ["card", "dragon-card"]
+
+    Gtk.Image file_icon {
+      icon-name: "text-x-generic-symbolic";
+      pixel-size: 64;
+    }
+
+    Gtk.Label title_label {
+      label: "File";
+      ellipsize: end;
+      max-width-chars: 34;
+      styles ["title-3"]
+    }
+
+    Gtk.Label subtitle_label {
+      label: "Drag into another application";
+      ellipsize: middle;
+      max-width-chars: 44;
+      styles ["dim-label"]
+    }
+
+    Gtk.Label {
+      label: "Drag to another application";
+      styles ["caption", "dim-label"]
+    }
+  };
+}
